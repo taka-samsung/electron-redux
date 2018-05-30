@@ -4,7 +4,7 @@ const {
   replayActionRenderer,
   getInitialStateRenderer,
   createAliasedAction,
-} = require('electron-redux');
+} = require('@vivlabs/electron-redux');
 const reducers = require('./reducers');
 
 const initialState = getInitialStateRenderer();

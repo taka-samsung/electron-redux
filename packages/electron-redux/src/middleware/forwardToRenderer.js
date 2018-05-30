@@ -24,13 +24,6 @@ const forwardToRenderer = () => next => (action) => {
       scope === 'synchronous-remote' &&
       contents.id === fromScopeId
     ) {
-      console.log(
-        'not forwarding to window',
-        contents.getTitle(),
-        contents.id,
-        'because from scope id is: ',
-        fromScopeId,
-      );
       continue;
     }
     contents.send('redux-action', rendererAction);

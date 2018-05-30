@@ -1,4 +1,4 @@
-# electron-redux
+# @vivlabs/electron-redux
 
 [![CircleCI](https://circleci.com/gh/hardchor/electron-redux/tree/master.svg?style=svg)](https://circleci.com/gh/hardchor/electron-redux/tree/master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/hardchor/electron-redux.svg)](https://greenkeeper.io/)
@@ -7,6 +7,10 @@
 * [Install](#install)
 * [Actions](#actions): [Local actions (renderer process)](#local-actions-renderer-process), [Aliased actions (main process)](#aliased-actions-main-process)
 * [Under the hood](#under-the-hood)
+
+## Forked Version (josiahruddell)
+
+Working off of a forked version of electron-redux for synchronous remote actions. Now (instead of the diagram below), actions are consumed by the local window redux store while they are IPCd to the main process. There they are replayed on all of the windows except the originating window.
 
 ## Motivation
 
@@ -23,7 +27,7 @@ Using redux with electron poses a couple of problems. Processes ([main](https://
 
 ## Install
 
-```
+```bash
 npm install --save electron-redux
 ```
 
