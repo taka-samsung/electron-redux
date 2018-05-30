@@ -23,11 +23,11 @@ render();
 store.subscribe(render);
 
 document.getElementById('increment').addEventListener('click', () => {
-  store.dispatch({ type: 'INCREMENT' });
+  store.dispatch({ type: 'INCREMENT', meta: { scope: 'synchronous-remote' } });
 });
 
 document.getElementById('decrement').addEventListener('click', () => {
-  store.dispatch({ type: 'DECREMENT' });
+  store.dispatch({ type: 'DECREMENT', meta: { scope: 'synchronous-remote' } });
 });
 
 document.getElementById('incrementAliased').addEventListener('click', () => {
