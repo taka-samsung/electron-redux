@@ -1,4 +1,4 @@
-import { ipcRenderer, remote } from 'electron';
+import { ipcRenderer } from 'electron';
 import validateAction from '../helpers/validateAction';
 
 const forwardToMain = store => next => (action) => {
@@ -7,7 +7,7 @@ const forwardToMain = store => next => (action) => {
 
   const scope = action.meta ? action.meta.scope : undefined;
   if (scope === 'synchronous-remote') {
-    const contents = remote.getCurrentWebContents();
+    const contents = require('@electron/remote').getCurrentWebContents();
     if (contents) {
       action.meta.fromScopeId = contents.id;
     }

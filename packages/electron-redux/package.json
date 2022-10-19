@@ -28,6 +28,7 @@
   "bugs": "https://github.com/josiahruddell/electron-redux/issues",
   "license": "MIT",
   "dependencies": {
+    "@electron/remote": "^2.0.8",
     "debug": "^3.0.0",
     "flux-standard-action": "^2.0.0",
     "redux": "^3.4.0"
